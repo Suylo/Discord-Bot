@@ -1,7 +1,5 @@
 #  frozen_string_literal: true
 
-# File which allows the user to see if the bot running correctly !
-
 BOT.message(start_with: "#{PREFIX}ping") do |event|
 
   user_mention = event.user.mention

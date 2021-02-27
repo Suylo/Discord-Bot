@@ -11,6 +11,6 @@ BOT.message(start_with: "#{PREFIX}merci") do |event|
   user_distinct = event.user.distinct
   server_name = event.server.name
 
-  event.respond "#{user_mention},  #{value_counter['counter']} remerciement!"
+  event.respond "#{user_mention},  #{value_counter['counter']} remerciements!"
   puts "ThanksCmd executed by #{user_distinct} on the server : #{server_name}"
 end

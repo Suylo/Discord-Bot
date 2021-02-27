@@ -1,8 +1,5 @@
 #  frozen_string_literal: true
 
-# File which allows the user to see the icon ID/URL of the server !
-
-
 BOT.message(start_with: "#{PREFIX}servericon") do |event|
 
   server_name = event.server.name

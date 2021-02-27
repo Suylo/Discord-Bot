@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Index :: File which is the controller of bot and include the others files
+# Index :: Controller
 
 require 'discordrb'
 require 'json'
@@ -10,9 +10,8 @@ value_token = JSON.parse(token)
 
 PREFIX = '!'
 BOT = Discordrb::Bot.new token: value_token['token']
-#  BOT_CMD = Discordrb::Commands::CommandBot.new token: value_token['token'], prefix: PREFIX
 
-# Importation of all variables Utils/Attribs.rb - For a future update
+# Utils/Attribs.rb - We'll come back to that later, when I know a bit more.
 # require_relative 'Utils/Attribs'
 
 #  Importation of all commands - Commands/

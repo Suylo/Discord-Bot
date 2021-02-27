@@ -1,18 +1,15 @@
 # frozen_string_literal: true
 
-# Run :: File which allows to run the bot thanks to the function
+# Run :: Run the bot with a function
 
 def run(action)
   if action == true
-    2.times do
-      puts ''
-    end
     puts '------------'
-    puts "Voici le lien pour inviter le bot : #{BOT.invite_url}"
+    puts "Link to invite the Bot : #{BOT.invite_url}"
     puts ''
     BOT.run
   else
-    puts 'Vous n\'avez pas défini d\'action lors de la séquence de démarrage du BOT !'
+    puts 'No parameters or a bad one has been set. Exemple use run(true) / run(false)'
   end
 end
 
