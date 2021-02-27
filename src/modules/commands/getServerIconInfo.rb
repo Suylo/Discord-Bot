@@ -2,9 +2,9 @@
 
 # GetServerIconInfo allows users to see URL and ID of the discord server
 module GetServerIconInfo
+  extend Discordrb::Commands::CommandContainer
 
   command :servericon do |event|
-
     server_name = event.server.name
     server_icon_url = event.server.icon_url
     server_icon_id = event.server.icon_id
@@ -12,7 +12,7 @@ module GetServerIconInfo
     user_distinct = event.user.distinct
 
     # rubocop:disable Layout/LineLength
-    event.respond "Tiens #{user_mention} ! Voici l'URL/ID de l'icone du discord : *#{server_name}* \n\n**URL:** #{server_icon_url}\n**ID:** #{server_icon_id}"
+    event.respond "Hi #{user_mention} ! Here is the URL and ID of the server icon : *#{server_name}* \n\n**URL:** #{server_icon_url}\n**ID:** #{server_icon_id}"
     # rubocop:enable Layout/LineLength
     puts "GetServerIcon_URL executed by #{user_distinct} on the server : #{server_name}"
   end

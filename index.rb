@@ -18,9 +18,11 @@ require_relative 'src/modules/commands/shutdownCmd'
 require_relative 'src/modules/commands/thanksCmd'
 require_relative 'src/modules/commands/getServerIconInfo'
 require_relative 'src/modules/commands/helpCmd'
+require_relative 'src/modules/commands/sayCmd'
 
 # Import of all events - src/modules/events/
 require_relative 'src/modules/events/joinAndLeave'
+require_relative 'src/modules/events/ready'
 
 # Include cmd modules...
 BOT.include! PingCmd
@@ -28,9 +30,11 @@ BOT.include! ShutdownCmd
 BOT.include! ThanksCmd
 BOT.include! GetServerIconInfo
 BOT.include! HelpCmd
+BOT.include! SayCmd
 
 # Include events modules..
 BOT.include! JoinAndLeaveEvent
+BOT.include! Ready
 
 #  Running the bot ... - utils/Run.rb
 require_relative 'utils/Run'

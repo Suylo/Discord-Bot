@@ -2,8 +2,9 @@
 
 # ThanksCmd allows you to thank [someone in particular] => later
 module ThanksCmd
+  extend Discordrb::Commands::CommandContainer
 
-  command :merci do |event|
+  command :thanks do |event|
     counter_info = File.read('utils/sources.json')
     value_counter = JSON.parse(counter_info)
 
@@ -14,7 +15,7 @@ module ThanksCmd
     user_distinct = event.user.distinct
     server_name = event.server.name
 
-    event.respond "#{user_mention},  #{value_counter['counter']} remerciements!"
+    event.respond "#{user_mention}, you added one thanks : #{value_counter['counter']} thanks!"
     puts "ThanksCmd executed by #{user_distinct} on the server : #{server_name}"
   end
 end

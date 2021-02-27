@@ -1,0 +1,23 @@
+{
+ "status_1": {
+   "type": 0,
+   "status": "online",
+   "name": "Status 1"
+ },
+  "status_2": {
+    "type": 1,
+    "status": "dnd",
+    "name": "Status 2"
+  },
+  "status_3": {
+    "type": 2,
+    "status": "idle",
+    "name": "Status 3"
+  },
+  "status_4": {
+    "type": 3,
+    "status": "online",
+    "name": "Status 4"
+  },
+  "cooldown": 60
+}

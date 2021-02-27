@@ -11,7 +11,7 @@ module PingCmd
     server_name = event.server.name
 
     msg = event.respond 'Pong !'
-    msg.edit "#{user_mention}, Pong ! Latence : #{Time.now - event.timestamp}s"
+    msg.edit "#{user_mention}, Pong ! Latency : #{Time.now - event.timestamp}s"
     puts "PingCmd executed by #{user_distinct} on the server : #{server_name}"
   end
 
