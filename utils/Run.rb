@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# Run :: Run the bot with a function
-
 def run(action)
   if action == true
     puts '------------'
@@ -12,4 +10,3 @@ def run(action)
     puts 'No parameters or a bad one has been set. Exemple use run(true) / run(false)'
   end
 end
-

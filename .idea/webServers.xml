@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c5ca32f9-8a29-4207-9c44-5113ffdb0c2b" name="LOCAL - DiscordRB push">
+        <fileTransfer rootFolder="/home/pi/Work/discordrb" accessType="SFTP" host="mc.suylo.fr" port="22" sshConfigId="04f0e87d-0b45-4199-b3bf-214935534673" sshConfig="pi@mc.suylo.fr:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
