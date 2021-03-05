@@ -19,6 +19,7 @@ require_relative 'src/modules/commands/thanksCmd'
 require_relative 'src/modules/commands/getServerIconInfo'
 require_relative 'src/modules/commands/helpCmd'
 require_relative 'src/modules/commands/sayCmd'
+require_relative 'src/modules/commands/getUserAvatar'
 
 # Import of all events - src/modules/events/
 require_relative 'src/modules/events/joinAndLeave'
@@ -31,6 +32,7 @@ BOT.include! ThanksCmd
 BOT.include! GetServerIconInfo
 BOT.include! HelpCmd
 BOT.include! SayCmd
+BOT.include! GetUserAvatar
 
 # Include events modules..
 BOT.include! JoinAndLeaveEvent

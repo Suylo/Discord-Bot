@@ -4,17 +4,14 @@
 module GetServerIconInfo
   extend Discordrb::Commands::CommandContainer
 
-  command :servericon do |event|
-    server_name = event.server.name
-    server_icon_url = event.server.icon_url
+  command(:servericon, aliases: %i[server_icon server_avatar], description: 'Display server\'s icon') do |event|
+    server_id = event.server.id
     server_icon_id = event.server.icon_id
-    user_mention = event.user.mention
-    user_distinct = event.user.distinct
 
     # rubocop:disable Layout/LineLength
-    event.respond "Hi #{user_mention} ! Here is the URL and ID of the server icon : *#{server_name}* \n\n**URL:** #{server_icon_url}\n**ID:** #{server_icon_id}"
+    event.respond "Hi #{event.user.mention} ! Here is the URL and ID of the server icon : *#{event.server.name}* \n\n**URL:** https://cdn.discordapp.com/icons/#{server_id}/#{server_icon_id}.png?size=512\n**ID:** #{server_icon_id}"
     # rubocop:enable Layout/LineLength
-    puts "GetServerIcon_URL executed by #{user_distinct} on the server : #{server_name}"
+    puts "GetServerIcon executed by #{event.user.distinct} on the server : #{event.server.name}"
   end
 end
 
