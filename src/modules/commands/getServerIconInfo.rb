@@ -9,7 +9,7 @@ module GetServerIconInfo
     server_icon_id = event.server.icon_id
 
     # rubocop:disable Layout/LineLength
-    event.respond "Hi #{event.user.mention} ! Here is the URL and ID of the server icon : *#{event.server.name}* \n\n**URL:** https://cdn.discordapp.com/icons/#{server_id}/#{server_icon_id}.png?size=512\n**ID:** #{server_icon_id}"
+    event.respond "Hi #{event.user.mention} ! Here is the URL and ID of the server icon : *#{event.server.name}* \n\n**URL:** https://cdn.discordapp.com/icons/#{server_id}/#{server_icon_id}.png?size=1024\n**ID:** #{server_icon_id}"
     # rubocop:enable Layout/LineLength
     puts "GetServerIcon executed by #{event.user.distinct} on the server : #{event.server.name}"
   end
