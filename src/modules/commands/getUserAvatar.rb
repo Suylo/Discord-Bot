@@ -8,6 +8,9 @@ module GetUserAvatar
   # rubocop:disable Layout/LineLength
   command(:pp, aliases: %i[avatar profile pdp], arg_types: [Discordrb::User], description: 'Display user\'s avatar.') do |channel, user|
 
+    if user == nil
+      user = channel.user
+    end
     channel.send_embed do |embed|
       embed.author = Discordrb::Webhooks::EmbedAuthor.new(name: "#{channel.user.name} - Here's #{user.name} avatar", url: nil, icon_url: channel.user.avatar_url)
       embed.image = Discordrb::Webhooks::EmbedImage.new(url: "https://cdn.discordapp.com/avatars/#{user.id}/#{user.avatar_id}.png?size=4096")
