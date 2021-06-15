@@ -8,6 +8,6 @@ def run(action)
     at_exit { BOT.stop }
     BOT.run
   else
-    puts 'No parameters or a bad one has been set. Exemple use run(true) / run(false)'
+    puts 'No parameters or a bad one has been set. Example use run(true) / run(false)'
   end
 end
