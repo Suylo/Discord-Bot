@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# ThanksCmd allows you to thank [someone in particular] => later
 module ThanksCmd
   extend Discordrb::Commands::CommandContainer
 
