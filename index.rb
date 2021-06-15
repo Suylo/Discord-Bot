@@ -12,18 +12,13 @@ PREFIX = '!'
 BOT = Discordrb::Commands::CommandBot.new token: value_token['token'], prefix: PREFIX
 
 # Import of all commands - src/modules/commands/
-# Why that ? In order to having a structured project that is easy to navigate without getting lost in it
-require_relative 'src/modules/commands/pingCmd'
-require_relative 'src/modules/commands/shutdownCmd'
-require_relative 'src/modules/commands/thanksCmd'
-require_relative 'src/modules/commands/getServerIconInfo'
-require_relative 'src/modules/commands/helpCmd'
-require_relative 'src/modules/commands/sayCmd'
-require_relative 'src/modules/commands/getUserAvatar'
+# Dynamic require in order to have structured project that is easy to navigate without getting lost in it
+commands = Dir["src/modules/commands/*.rb"]
+commands.each { |i| require_relative "#{i}" }
 
 # Import of all events - src/modules/events/
-require_relative 'src/modules/events/joinAndLeave'
-require_relative 'src/modules/events/ready'
+events = Dir["src/modules/events/*.rb"]
+events.each { |n| require_relative "#{n}" }
 
 # Include cmd modules...
 BOT.include! PingCmd
@@ -33,6 +28,7 @@ BOT.include! GetServerIconInfo
 BOT.include! HelpCmd
 BOT.include! SayCmd
 BOT.include! GetUserAvatar
+BOT.include! GetUserInfos
 
 # Include events modules..
 BOT.include! JoinAndLeaveEvent
