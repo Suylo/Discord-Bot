@@ -16,19 +16,17 @@ A Template [Discord](https://discord.com) bot made in [Ruby](https://www.ruby-la
 3. Create a folder, go in, then
 4. Right click, and click **Git Bash here**
 5. Clone repo
-
-
-    git clone https://github.com/Suylo/Discord-Bot.git
-
+```
+ git clone https://github.com/Suylo/Discord-Bot.git
+```
 6. Go in /Discord-Bot
-
-
-     cd /Discord-Bot
-
+```
+ cd /Discord-Bot
+```
 7. Install ruby gem discordrb
-
-
-    gem install discordrb
+```
+ gem install discordrb
+```
 
 8. Create a file named `token.json` in */utils/* 
 ```
@@ -38,9 +36,9 @@ A Template [Discord](https://discord.com) bot made in [Ruby](https://www.ruby-la
 ```
 9. Grab your token from discord developer apps : [Tutorial here](https://www.writebots.com/discord-bot-token/)
 10. Run the bot with :
-
-
-    ruby index.rb
+```
+ ruby index.rb
+```
 
 And normally everything works! Good luck and enjoy !
 
