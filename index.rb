@@ -28,7 +28,7 @@ BOT.include! GetServerIconInfo
 BOT.include! HelpCmd
 BOT.include! SayCmd
 BOT.include! GetUserAvatar
-BOT.include! GetUserInfos
+#BOT.include! GetUserInfos
 
 # Include events modules..
 BOT.include! JoinAndLeaveEvent
