@@ -8,7 +8,7 @@ A Template [Discord](https://discord.com) bot made in [Ruby](https://www.ruby-la
 2. If you have any advices to give me on my code, on the way to do it, the structure or if I don't respect some conventions. I'm a good listener and that's why you can join my discord and help me (So that I can improve a maximum !).
 
 
-## **Utilisation**
+## **Installation**
 
 ### Windows :
 1. Download & install [Ruby](https://rubyinstaller.org/) latest version with DevKit.
